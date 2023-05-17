@@ -4,7 +4,7 @@
   display: flex;
   height: calc(100vh - $header-height);
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: $header-height;
   font-family: '', sans-serif;
 
@@ -17,6 +17,7 @@
     position: relative;
     margin-left: -45px;
     background-color: $banner-shadow;
+    min-height: 460px;
 
     &:first-child {
       clip-path: polygon(0 0, 0 100%, 80% 100%, 100% 0);

@@ -1,6 +1,8 @@
+@import "./styles/variables.scss";
 .App {
     width: 100%;
     min-height: 100vh;
     font-family: 'Shadows Into', cursive;
     position: relative;
+    background-color: $background-color;
 }
