@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './vendor/normalize.css';
 import './vendor/fonts/ShadowsIntoLight.css';
+import './vendor/fonts/Lato.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 

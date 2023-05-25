@@ -5,6 +5,7 @@
   height: $header-height;
   background-color: $background-color;
   position: fixed;
+  z-index: 999;
 
   &__container {
     max-width: 1536px;

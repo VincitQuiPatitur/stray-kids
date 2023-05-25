@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 50px;
+  padding: 70px 50px 40px;
 
   &__item {
     display: flex;
@@ -17,6 +17,7 @@
     position: relative;
     left: 0;
     text-align: center;
+    cursor: pointer;
 
     &:not(:first-child) {
       margin-left: -50px;
@@ -53,7 +54,7 @@
     position: absolute;
     top: -40px;
     left: 0;
-    z-index: 999;
+    z-index: 3;
     display: inline-block;
     width: 100%;
     user-select: none;
