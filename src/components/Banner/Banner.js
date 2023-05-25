@@ -1,13 +1,13 @@
 import React from "react";
 import "./Banner.scss";
-import bangChanPhoto from "../../images/bang-chan.jpg";
-import leeKnowPhoto from "../../images/lee-know.jpg";
-import changbinPhoto from "../../images/changbin.jpg";
-import hyunjinPhoto from "../../images/hyunjin.jpg";
-import hanPhoto from "../../images/han.jpg";
-import felixPhoto from "../../images/felix.jpg";
-import seungminPhoto from "../../images/seungmin.jpg";
-import inPhoto from "../../images/i-n.jpg";
+import bangChanPhoto from "../../images/bannerImages/bang-chan.jpg";
+import leeKnowPhoto from "../../images/bannerImages/lee-know.jpg";
+import changbinPhoto from "../../images/bannerImages/changbin.jpg";
+import hyunjinPhoto from "../../images/bannerImages/hyunjin.jpg";
+import hanPhoto from "../../images/bannerImages/han.jpg";
+import felixPhoto from "../../images/bannerImages/felix.jpg";
+import seungminPhoto from "../../images/bannerImages/seungmin.jpg";
+import inPhoto from "../../images/bannerImages/i-n.jpg";
 function Banner() {
     return (
         <section className="banner">
