@@ -23,7 +23,7 @@
       margin: 0;
       font-size: 24px;
       text-align: center;
-      color: #605f5f;
+      color: $slogan-color;
     }
   }
 
@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #2c2c2c;
+    border-top: 1px solid $border-color;
   }
 
   &__author {

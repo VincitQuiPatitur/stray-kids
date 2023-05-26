@@ -15,7 +15,7 @@ const formatGroupPosition = (groupPosition) => {
 function MemberInfo({ member }) {
     if (!member) {
         return (
-            <div className="member">Choose the member</div>
+            <div className="member">Select a member to  see information about him</div>
         )
     }
 
