@@ -7,6 +7,7 @@ import AlbumsPage from "./pages/AlbumsPage/AlbumsPage";
 import HistoryPage from "./pages/HistoryPage/HistoryPage";
 import SocialMediaPage from "./pages/SocialMediaPage/SocialMediaPage";
 import {Routes, Route} from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                            element={<SocialMediaPage/>}
                     />
                 </Routes>
+                <Footer />
             </div>
         </div>
     );
