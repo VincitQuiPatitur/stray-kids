@@ -1,0 +1,27 @@
+@import "./styles/variables.scss";
+
+/* Стили для полосы прокрутки */
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: $border-color;
+}
+
+/* Стили для ползунка */
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: $slogan-color;
+}
+
+/* Стили для полосы прокрутки */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: $border-color;
+}
+
+/* Стили для полосы прокрутки в Firefox */
+@-moz-document url-prefix() {
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: $slogan-color $border-color;
+  }
+}
