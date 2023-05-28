@@ -28,7 +28,6 @@
 
   &__menu {
     width: 400px;
-    font-size: 18px;
 
     &-container {
       display: flex;
@@ -44,6 +43,8 @@
       &-item {
         text-decoration: none;
         color: $text-color;
+        font-size: 18px;
+        line-height: 22px;
         text-transform: uppercase;
         position: relative;
         cursor: pointer;
@@ -61,6 +62,11 @@
 
         &:hover:after, &focus:after {
           width: 100%;
+        }
+
+        &_active {
+          color: $red-color;
+          font-weight: 700;
         }
       }
     }
