@@ -2,11 +2,7 @@ import React from "react";
 import "./MemberInfo.scss";
 
 const formatDate = (date) => {
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear();
-
-    return `${day}.${month}.${year}`;
+    return new Date(date).toLocaleDateString();
 }
 
 const formatGroupPosition = (groupPosition) => {
@@ -19,7 +15,7 @@ function MemberInfo({ member }) {
         )
     }
 
-    const formattedBirthday = formatDate(member.birthday);
+    const formattedBirthday = formatDate(member.birthDate);
     const formattedGroupPosition = formatGroupPosition(member.groupPosition);
 
     return (
