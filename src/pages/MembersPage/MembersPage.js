@@ -2,8 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./MembersPage.scss"
 import MembersCardList from "../../components/MembersCardList/MembersCardList";
 import MemberInfo from "../../components/MemberInfo/MemberInfo";
-import {getMembers} from "../../utils/MembersApi";
-//import { members } from "../../data/membersData";
+import { getMembers } from "../../utils/MembersApi";
 function MembersPage() {
     const [members, setMembers] = useState([]);
     const [selectedMember, setSelectedMember] = useState(null);
