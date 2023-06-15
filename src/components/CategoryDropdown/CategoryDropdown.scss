@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 16px;
+
+  &__block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__select {
+    border-radius: 8px;
+    padding: 6px;
+    width: 200px;
+    background-color: $text-color;
+  }
+
+  &__option {
+    background-color: $text-color;
+    padding: 6px;
+  }
+}

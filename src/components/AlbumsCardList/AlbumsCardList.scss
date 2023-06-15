@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.albums {
+  width: 100%;
+  padding: 40px 0 80px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    border-radius: 10px;
+    // box-shadow: 6px 6px 12px 6px #2c2c2c;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: $background-color;
+
+    &:hover .albums__title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:hover .albums__image {
+      opacity: .3;
+      transform: scale(1.3);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    //transform: rotateY(40deg) rotateX(33deg) translateZ(0);
+    //transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .3s, transform .3s;
+    color: $translucent-text;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
