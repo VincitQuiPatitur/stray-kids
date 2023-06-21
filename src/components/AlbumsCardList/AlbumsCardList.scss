@@ -18,13 +18,16 @@
   &__item {
     border-radius: 10px;
     // box-shadow: 6px 6px 12px 6px #2c2c2c;
+    overflow: hidden;
+    background-color: $background-color;
+  }
+
+  &__link {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
-    background-color: $background-color;
 
     &:hover .albums__title {
       opacity: 1;

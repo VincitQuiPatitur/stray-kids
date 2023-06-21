@@ -8,6 +8,7 @@ import HistoryPage from "./pages/HistoryPage/HistoryPage";
 import SocialMediaPage from "./pages/SocialMediaPage/SocialMediaPage";
 import {Routes, Route} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import AlbumPage from "./pages/AlbumPage/AlbumPage";
 
 function App() {
     return (
@@ -23,6 +24,9 @@ function App() {
                     />
                     <Route path='/albums'
                            element={<AlbumsPage/>}
+                    />
+                    <Route path='/albums/:id'
+                           element={<AlbumPage/>}
                     />
                     <Route path='/history'
                            element={<HistoryPage/>}

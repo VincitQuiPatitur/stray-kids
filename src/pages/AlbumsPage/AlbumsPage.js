@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import AlbumsCardList from "../../components/AlbumsCardList/AlbumsCardList";
 import CategoryDropdown from "../../components/CategoryDropdown/CategoryDropdown";
 import "./AlbumsPage.scss";
@@ -31,7 +31,7 @@ function AlbumsPage() {
 
     const handleSortCategoryChange = (e) => {
         setSelectedSortCategory(e.target.value);
-        setAlbums(sortAlbums([...albums], e.target.value)); // Создаем копию массива albums
+        setAlbums(sortAlbums([...albums], e.target.value));
     };
 
     const sortAlbums = (albums, sortCategory) => {
@@ -49,7 +49,7 @@ function AlbumsPage() {
             default:
                 return albums;
         }
-    };
+    }
 
     return (
         <main className="discography">
