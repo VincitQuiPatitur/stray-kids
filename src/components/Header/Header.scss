@@ -6,7 +6,7 @@
   background-color: $header-background;
   backdrop-filter: blur(5px);
   position: fixed;
-  z-index: 999;
+  z-index: 10;
   font-family: 'Shadows Into', cursive;
 
   &__container {

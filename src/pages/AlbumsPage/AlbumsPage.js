@@ -2,9 +2,10 @@ import React, {useEffect, useState} from "react";
 import AlbumsCardList from "../../components/AlbumsCardList/AlbumsCardList";
 import CategoryDropdown from "../../components/CategoryDropdown/CategoryDropdown";
 import "./AlbumsPage.scss";
-import { albumCategoryOptions } from "../../utils/constants.js";
-import { sortCategoryOptions } from "../../utils/constants.js";
-import { getAlbums } from "../../utils/AlbumsApi";
+import {albumCategoryOptions} from "../../utils/constants.js";
+import {sortCategoryOptions} from "../../utils/constants.js";
+import {getAlbums} from "../../utils/AlbumsApi";
+import Preloader from "../../components/Preloader/Preloader";
 
 function AlbumsPage() {
     const [selectedAlbumCategory, setSelectedAlbumCategory] = useState(
@@ -14,15 +15,18 @@ function AlbumsPage() {
         "date from new to old"
     );
     const [albums, setAlbums] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        setIsLoading(true);
         getAlbums()
             .then((data) => {
                 setAlbums(
                     data.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
                 );
             })
-            .catch((error) => console.log(error));
+            .catch((error) => console.log(error))
+            .finally(() => setIsLoading(false));
     }, []);
 
     const handleAlbumCategoryChange = (e) => {
@@ -65,6 +69,7 @@ function AlbumsPage() {
                 albums={albums}
                 selectedAlbumCategory={selectedAlbumCategory}
             />
+            { isLoading && <Preloader/> }
         </main>
     );
 }

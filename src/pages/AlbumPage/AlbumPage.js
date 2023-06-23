@@ -2,22 +2,26 @@ import React, {useEffect, useState} from "react";
 import {getAlbumById} from "../../utils/AlbumsApi";
 import {useParams} from "react-router-dom";
 import "./AlbumPage.scss";
+import Preloader from "../../components/Preloader/Preloader";
 
 function AlbumPage() {
     const {id} = useParams();
     const [album, setAlbum] = useState();
+    const [isLoading, setIsLoading] = useState(true);
 
     const formatDate = (date) => {
         return new Date(date).toLocaleDateString();
     }
 
     useEffect(() => {
+        setIsLoading(true);
         getAlbumById(id)
             .then(data => {
                 setAlbum(data);
                 console.log(data);
             })
-            .catch(error => console.log(error));
+            .catch(error => console.log(error))
+            .finally(() => setIsLoading(false));
     }, [id]);
 
     const formattedReleaseDate = album ? formatDate(album.releaseDate) : '';
@@ -55,10 +59,9 @@ function AlbumPage() {
                             </iframe>
                         </div>
                     </>
-                ) : (
-                    <p>Loading...</p>
-                )}
+                ) : null}
             </section>
+            { isLoading && <Preloader/> }
         </main>
     );
 }
